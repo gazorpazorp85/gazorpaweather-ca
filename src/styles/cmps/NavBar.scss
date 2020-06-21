@@ -1,0 +1,17 @@
+.nav-bar-container {
+    width: 100%;
+    background-color: $clr1;
+    border-bottom: 3px solid $clr3;
+}
+
+.nav-bar-subcontainer {
+    width: 100%;
+    height: 47px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.active {
+    color: $clr4;
+    font-weight: 800;
+}

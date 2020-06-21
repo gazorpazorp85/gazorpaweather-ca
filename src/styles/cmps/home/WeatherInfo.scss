@@ -1,0 +1,41 @@
+.weather-info-container {
+    height: 450px;
+    margin-top: 20px;
+}
+
+.weather-icon {
+    height: 175px;
+    width: 175px;
+}
+
+.field:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.city-name {
+    font-size: rem(48px);
+}
+
+.temperature, .weather-text, .time {
+    font-size: rem(36px);
+}
+
+@include for-mobile-wide-layout {
+
+    .weather-info-container {
+        height: 200px;
+    }
+
+    .weather-icon {
+        height: 75px;
+        width: 75px;
+    }
+
+    .city-name {
+        font-size: rem(24px);
+    }
+    
+    .temperature, .weather-text, .time {
+        font-size: rem(18px);
+    }
+}

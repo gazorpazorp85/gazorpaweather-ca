@@ -1,0 +1,25 @@
+// Setup
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/variables";
+
+// Basics
+@import "basics/base";
+@import "basics/buttons";
+@import "basics/helpers";
+@import "basics/input";
+@import "basics/layout";
+@import "basics/typography";
+
+// cmps
+@import "cmps/Footer.scss";
+@import "cmps/NavBar.scss";
+@import "cmps/home/LocationsLists.scss";
+@import "cmps/home/LocationsPreview.scss";
+@import "cmps/home/SearchBar.scss";
+@import "cmps/home/WeatherInfo.scss";
+// pages
+
+@import "pages/About.scss";
+@import "pages/Favorites.scss";
+@import "pages/Home.scss";

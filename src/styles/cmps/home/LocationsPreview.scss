@@ -1,0 +1,12 @@
+.location-container {
+    height: 34px;
+    padding-inline-start: 10px;
+
+    &:hover {
+        color: $clr3;
+    }
+}
+
+.location-container:not(:last-child) {
+    border-bottom: 1px solid $clr1;
+}

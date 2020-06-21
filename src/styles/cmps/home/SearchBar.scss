@@ -1,0 +1,17 @@
+.search-bar-container {
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+@include for-mobile-wide-layout {
+
+    .search-bar-container {
+        max-height: 90px;
+        margin-top: 20px;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

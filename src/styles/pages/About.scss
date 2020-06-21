@@ -1,0 +1,75 @@
+.about-container {
+    background-color: $clr2;
+    color: $clr4;
+    overflow-y: auto;
+}
+
+.about-subcontainer {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.img-container {
+    height: 255px;
+    width: 255px;
+    background-image: url(../../assets/img/paolo_groppi.jpg);
+    background-repeat: no-repeat;
+    background-position: -62px -17px;
+    background-size: 362px;
+    border-radius: 50%;
+    border: 5px solid $clr4;
+}
+
+.info-container {
+    width: 67%;
+    margin-inline-start: 42px;
+
+    & h1 {
+        margin: 0px 0px 10px 0px;
+        font-size: rem(48px);
+    }
+}
+
+.presentation-container {
+    word-break: break-word;
+}
+
+@include for-tablet-wide-layout {
+    .img-container {
+        height: 225px;
+        width: 225px;
+        background-position: -62px -17px;
+        background-size: 332px;
+    }
+}
+
+@include for-tablet-layout {
+    .about-subcontainer {
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+    }
+
+    .img-container {
+        height: 125px;
+        width: 125px;
+        background-position: -45px -12px;
+        background-size: 202px;
+        border: 3px solid $clr4;
+    }
+
+    .info-container {
+        align-items: center;
+        width: 80%;
+        margin-inline-start: unset;
+        margin-top: 20px;
+        flex: 1;
+    }
+}
+
+@include for-mobile-wide-layout {
+    .info-container {
+        width: 100%;
+        overflow-y: auto;
+    }
+}
