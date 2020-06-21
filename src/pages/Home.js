@@ -19,6 +19,13 @@ class Home extends Component {
         this.props.loadFavorites();
     }
 
+    componentDidUpdate(prevProps) {
+        const { favorites } = this.props;
+        if (prevProps.favorites !== favorites) {
+            this.props.loadFavorites();
+        }
+    }
+
     setLocation = (location) => {
         this.setState({ location: location }, () => this.showWeatherByLocation());
     }
@@ -34,11 +41,11 @@ class Home extends Component {
 
     editFavorites = (location) => {
         const { addToFavorites, favorites, removeFromFavorites } = this.props;
-        const isLocationInFavorites = favorites.findIndex(favorite => favorite.Key === location.Key);
-        if (isLocationInFavorites > 0) {
-            addToFavorites(location)
+        const isLocationInFavorites = favorites.length > 0 ? favorites.findIndex(favorite => favorite.Key === location.Key) : -1;
+        if (isLocationInFavorites < 0) {
+            addToFavorites(location);
         } else {
-            removeFromFavorites(location)
+            removeFromFavorites(location);
         }
     }
 
@@ -51,7 +58,7 @@ class Home extends Component {
                 <div className="flex column main-container home-subcontainer">
                     <div className="flex logo-container"></div>
                     <SearchBar setLocation={this.setLocation} />
-                    {location && weather && <WeatherInfo location={location} weather={weather} />}
+                    {location && weather && <WeatherInfo editFavorites={this.editFavorites} location={location} weather={weather} />}
                 </div>
             </div>
         )

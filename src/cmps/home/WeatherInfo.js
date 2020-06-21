@@ -9,7 +9,7 @@ export default function WeatherInfo({ editFavorites, location, weather }) {
             <div className="field city-name">{location.LocalizedName}</div>
             <div className="field temperature">{weather.Temperature.Metric.Value} {weather.Temperature.Metric.Unit}</div>
             <div className="field weather-text">{weather.WeatherText}</div>
-            <div className="btn" onClick={() => editFavorites(location)}>like</div>
+            <div className="btn edit" onClick={() => editFavorites(location)}>like</div>
         </div>
     )
 }

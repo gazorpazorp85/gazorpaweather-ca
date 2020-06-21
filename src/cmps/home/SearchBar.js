@@ -15,7 +15,8 @@ export default class SearchBar extends Component {
     inputChange = (ev) => {
         const { value } = ev.target;
         this.setState({ searchQuery: value }, () => {
-            if (this.state.searchQuery.length >= 2) this.predictLocation(this.state.searchQuery)
+            if (this.state.searchQuery.length >= 2) this.predictLocation(this.state.searchQuery);
+            if (this.state.searchQuery.length === 0) this.setState({ locations: null });
         });
     }
 
